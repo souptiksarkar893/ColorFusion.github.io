@@ -1,2 +1,1 @@
-# ColorFusion.github.io
-It is a website for creating your own gradients and exploring gradients.
+https://souptiksarkar893.github.io/ColorFusion.github.io/#
