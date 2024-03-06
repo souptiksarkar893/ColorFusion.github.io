@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ColorFusion</title>
+    <link rel="icon" href="./paint-bucket.svg" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><i class="fas fa-paint-brush"></i> ColorFusion</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/souptiksarkar60"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.instagram.com/souptiksarkar147/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.linkedin.com/in/souptik-sarkar-738502225"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br /><br />
+    <div class="container">
+      <section class="create-gradient-section">
+        <h1>Create Your Own Gradient</h1>
+        <div class="gradient-preview" id="gradient-preview"></div>
+        <div class="controls">
+          <label for="num-colors">Number of Colors:</label>
+          <select id="num-colors" class="form-control">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <div id="color-controls"></div>
+          <label for="num-colors"></label><br />
+          <label for="num-colors">Degree:</label>
+          <input
+            type="number"
+            id="angle"
+            value="135"
+            min="0"
+            max="360"
+            class="form-control"
+          />
+          <button id="generate-gradient-btn" class="btn btn-primary">
+            <i class="fas fa-magic"></i> Generate Gradient
+          </button>
+          <button id="copy-user-gradient-btn" class="btn btn-success">
+            <i class="far fa-copy"></i> Copy Gradient
+          </button>
+          <button id="download-gradient-btn" class="btn btn-secondary">
+            <i class="fas fa-download"></i> Download Gradient
+          </button>
+        </div>
+      </section>
+
+      <br /><br />
+
+      <section class="gradient-gallery-section">
+        <h1>Pre-defined Gradients</h1>
+        <div id="gradients-container" class="row"></div>
+        <div class="pagination" id="pagination"></div>
+      </section>
+    </div>
+
+    <!-- Copy Gradient Modal -->
+    <div id="copyModal" class="copy-modal">
+      <div class="copy-modal-content">
+        <span class="close">&times;</span>
+        <h2>Copy Gradient</h2>
+        <textarea id="copy-textarea" class="copy-textarea" readonly></textarea>
+        <button id="close-modal-btn" class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS, jQuery, and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome Icons JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
